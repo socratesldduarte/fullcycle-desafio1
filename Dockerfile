@@ -6,7 +6,7 @@ COPY app /app/
 
 RUN go mod init example/app
 
-CMD [ "/go", "run", "." ]
+CMD [ "go", "run", "." ]
 
 # FROM alpine
 

@@ -6,12 +6,12 @@ COPY app /app/
 
 RUN go mod init example/app
 
-CMD [ "go", "run", "." ]
+RUN go build
 
-# FROM alpine
+FROM busybox:latest
 
-# WORKDIR /app
+WORKDIR /app
 
-# COPY --from=GOLANG /app .
+COPY --from=GOLANG /app .
 
-# CMD [ "/go", "run", "." ]
+CMD [ "./app" ]

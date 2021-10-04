@@ -8,7 +8,7 @@ RUN go mod init example/app
 
 RUN go build
 
-FROM busybox:latest
+FROM scratch
 
 WORKDIR /app
 
